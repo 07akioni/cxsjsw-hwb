@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>地铁路线查询</title>
+  <link rel="stylesheet" href="/semantic.min.css"/>
+</head>
+<body>
+  <div class="ui container" style="margin-top: 1rem">
+    <div class="ui segment" style="padding: 2em">
+      <div class="ui sub header">From</div>
+      <select name="From" class="ui fluid search dropdown" id="from">
+        <option value="0">苹果园</option>
+        <option value="1">古城</option>
+        <option value="2">八角游乐园</option>
+        <option value="3">八宝山</option>
+        <option value="4">玉泉路</option>
+        <option value="5">五棵松</option>
+        <option value="6">万寿路</option>
+        <option value="7">公主坟</option>
+        <option value="8">军事博物馆</option>
+        <option value="9">木樨地</option>
+        <option value="10">南礼士路</option>
+        <option value="11">复兴门</option>
+        <option value="12">西单</option>
+        <option value="13">天安门西</option>
+        <option value="14">天安门东</option>
+        <option value="15">王府井</option>
+        <option value="16">东单</option>
+        <option value="17">建国门</option>
+        <option value="18">永安里</option>
+        <option value="19">国贸</option>
+        <option value="20">大望路</option>
+        <option value="21">四惠</option>
+        <option value="22">四惠东</option>
+        <option value="23">西直门</option>
+        <option value="24">车公庄</option>
+        <option value="25">阜成门</option>
+        <option value="26">长椿街</option>
+        <option value="27">宣武门</option>
+        <option value="28">和平门</option>
+        <option value="29">前门</option>
+        <option value="30">崇文门</option>
+        <option value="31">北京站</option>
+        <option value="32">朝阳门</option>
+        <option value="33">东四十条</option>
+        <option value="34">东直门</option>
+        <option value="35">雍和宫</option>
+        <option value="36">安定门</option>
+        <option value="37">鼓楼大街</option>
+        <option value="38">积水潭</option>
+        <option value="39">安河桥北</option>
+        <option value="40">北宫门</option>
+        <option value="41">西苑</option>
+        <option value="42">圆明园</option>
+        <option value="43">北京大学东门</option>
+        <option value="44">中关村</option>
+        <option value="45">海淀黄庄</option>
+        <option value="46">人民大学</option>
+        <option value="47">魏公村</option>
+        <option value="48">国家图书馆</option>
+        <option value="49">动物园</option>
+        <option value="50">新街口</option>
+        <option value="51">平安里</option>
+        <option value="52">西四</option>
+        <option value="53">灵境胡同</option>
+        <option value="54">菜市口</option>
+        <option value="55">陶然亭</option>
+        <option value="56">北京南站</option>
+        <option value="57">马家堡</option>
+        <option value="58">角门西</option>
+        <option value="59">公益西桥</option>
+        <option value="60">天通苑北</option>
+        <option value="61">天通苑</option>
+        <option value="62">天通苑南</option>
+        <option value="63">立水桥</option>
+        <option value="64">立水桥南</option>
+        <option value="65">北苑路北</option>
+        <option value="66">大屯路东</option>
+        <option value="67">惠新西街北口</option>
+        <option value="68">惠新西街南口</option>
+        <option value="69">和平西桥</option>
+        <option value="70">和平里北街</option>
+        <option value="71">北新桥</option>
+        <option value="72">张自忠路</option>
+        <option value="73">东四</option>
+        <option value="74">灯市口</option>
+        <option value="75">磁器口</option>
+        <option value="76">天坛东门</option>
+        <option value="77">蒲黄榆</option>
+        <option value="78">刘家窑</option>
+        <option value="79">宋家庄</option>
+        <option value="80">海淀五路居</option>
+        <option value="81">慈寿寺</option>
+        <option value="82">花园桥</option>
+        <option value="83">白石桥南</option>
+        <option value="84">车公庄西</option>
+        <option value="85">北海北</option>
+        <option value="86">南锣鼓巷</option>
+        <option value="87">东大桥</option>
+        <option value="88">呼家楼</option>
+        <option value="89">金台路</option>
+        <option value="90">十里堡</option>
+        <option value="91">青年路</option>
+        <option value="92">褡裢坡</option>
+        <option value="93">黄渠</option>
+        <option value="94">常营</option>
+        <option value="95">草房</option>
+        <option value="96">物资学院路</option>
+        <option value="97">通州北关</option>
+        <option value="98">通运门</option>
+        <option value="99">北运河西</option>
+        <option value="100">北运河东</option>
+        <option value="101">郝家府</option>
+        <option value="102">东夏园</option>
+        <option value="103">潞城</option>
+        <option value="104">北京西站</option>
+        <option value="105">湾子</option>
+        <option value="106">达官营</option>
+        <option value="107">广安门内</option>
+        <option value="108">虎坊桥</option>
+        <option value="109">珠市口</option>
+        <option value="110">桥湾</option>
+        <option value="111">广渠门内</option>
+        <option value="112">广渠门外</option>
+        <option value="113">双井</option>
+        <option value="114">九龙山</option>
+        <option value="115">大郊亭</option>
+        <option value="116">百子湾</option>
+        <option value="117">化工</option>
+        <option value="118">南楼梓庄</option>
+        <option value="119">欢乐谷景区</option>
+        <option value="120">垡头</option>
+        <option value="121">双合</option>
+        <option value="122">焦化厂</option>
+        <option value="123">朱辛庄</option>
+        <option value="124">育知路</option>
+        <option value="125">平西府</option>
+        <option value="126">回龙观东大街</option>
+        <option value="127">霍营</option>
+        <option value="128">育新</option>
+        <option value="129">西小口</option>
+        <option value="130">永泰庄</option>
+        <option value="131">林萃桥</option>
+        <option value="132">森林公园南门</option>
+        <option value="133">奥林匹克公园</option>
+        <option value="134">奥体中心</option>
+        <option value="135">北土城</option>
+        <option value="136">安华桥</option>
+        <option value="137">安德里北街</option>
+        <option value="138">什刹海</option>
+        <option value="139">白堆子</option>
+        <option value="140">六里桥东</option>
+        <option value="141">六里桥</option>
+        <option value="142">七里庄</option>
+        <option value="143">丰台东大街</option>
+        <option value="144">丰台南路</option>
+        <option value="145">科怡路</option>
+        <option value="146">丰台科技园</option>
+        <option value="147">郭公庄</option>
+        <option value="148">巴沟</option>
+        <option value="149">苏州街</option>
+        <option value="150">知春里</option>
+        <option value="151">知春路</option>
+        <option value="152">西土城</option>
+        <option value="153">牡丹园</option>
+        <option value="154">健德门</option>
+        <option value="155">安贞门</option>
+        <option value="156">芍药居</option>
+        <option value="157">太阳宫</option>
+        <option value="158">三元桥</option>
+        <option value="159">亮马桥</option>
+        <option value="160">农业展览馆</option>
+        <option value="161">团结湖</option>
+        <option value="162">金台夕照</option>
+        <option value="163">劲松</option>
+        <option value="164">潘家园</option>
+        <option value="165">十里河</option>
+        <option value="166">分钟寺</option>
+        <option value="167">成寿寺</option>
+        <option value="168">石榴庄</option>
+        <option value="169">大红门</option>
+        <option value="170">角门东</option>
+        <option value="171">草桥</option>
+        <option value="172">纪家庙</option>
+        <option value="173">首经贸</option>
+        <option value="174">丰台站</option>
+        <option value="175">泥洼</option>
+        <option value="176">西局</option>
+        <option value="177">莲花桥</option>
+        <option value="178">西钓鱼台</option>
+        <option value="179">车道沟</option>
+        <option value="180">长春桥</option>
+        <option value="181">火器营</option>
+        <option value="182">大钟寺</option>
+        <option value="183">五道口</option>
+        <option value="184">上地</option>
+        <option value="185">西二旗</option>
+        <option value="186">龙泽</option>
+        <option value="187">回龙观</option>
+        <option value="188">北苑</option>
+        <option value="189">望京西</option>
+        <option value="190">光熙门</option>
+        <option value="191">柳芳</option>
+        <option value="192">张郭庄</option>
+        <option value="193">园博园</option>
+        <option value="194">大瓦窑</option>
+        <option value="195">郭庄子</option>
+        <option value="196">大井</option>
+        <option value="197">陶然桥</option>
+        <option value="198">永定门外</option>
+        <option value="199">景泰</option>
+        <option value="200">方庄</option>
+        <option value="201">南八里庄</option>
+        <option value="202">北工大西门</option>
+        <option value="203">平乐园</option>
+        <option value="204">红庙</option>
+        <option value="205">朝阳公园</option>
+        <option value="206">枣营</option>
+        <option value="207">东风北桥</option>
+        <option value="208">将台</option>
+        <option value="209">高家园</option>
+        <option value="210">望京南</option>
+        <option value="211">阜通</option>
+        <option value="212">望京</option>
+        <option value="213">东湖渠</option>
+        <option value="214">来广营</option>
+        <option value="215">善各庄</option>
+        <option value="216">清华东路西口</option>
+        <option value="217">六道口</option>
+        <option value="218">北沙滩</option>
+        <option value="219">安立路</option>
+        <option value="220">关庄</option>
+        <option value="221">望京东</option>
+        <option value="222">崔各庄</option>
+        <option value="223">马泉营</option>
+        <option value="224">孙河</option>
+        <option value="225">国展</option>
+        <option value="226">花梨坎</option>
+        <option value="227">后沙峪</option>
+        <option value="228">南法信</option>
+        <option value="229">石门</option>
+        <option value="230">顺义</option>
+        <option value="231">俸伯</option>
+        <option value="232">高碑店</option>
+        <option value="233">传媒大学</option>
+        <option value="234">双桥</option>
+        <option value="235">管庄</option>
+        <option value="236">八里桥</option>
+        <option value="237">通州北苑</option>
+        <option value="238">果园</option>
+        <option value="239">九棵树</option>
+        <option value="240">梨园</option>
+        <option value="241">临河里</option>
+        <option value="242">土桥</option>
+        <option value="243">昌平西山口</option>
+        <option value="244">十三陵景区</option>
+        <option value="245">昌平</option>
+        <option value="246">昌平东关</option>
+        <option value="247">北邵洼</option>
+        <option value="248">南邵</option>
+        <option value="249">沙河高教园</option>
+        <option value="250">沙河</option>
+        <option value="251">巩华城</option>
+        <option value="252">生命科学园</option>
+        <option value="253">肖村</option>
+        <option value="254">小红门</option>
+        <option value="255">旧宫</option>
+        <option value="256">亦庄桥</option>
+        <option value="257">亦庄文化园</option>
+        <option value="258">万源街</option>
+        <option value="259">荣京东街</option>
+        <option value="260">荣昌东街</option>
+        <option value="261">同济南路</option>
+        <option value="262">经海路</option>
+        <option value="263">次渠南</option>
+        <option value="264">次渠</option>
+        <option value="265">新宫</option>
+        <option value="266">西红门</option>
+        <option value="267">高米店北</option>
+        <option value="268">高米店南</option>
+        <option value="269">枣园</option>
+        <option value="270">清源路</option>
+        <option value="271">黄村西大街</option>
+        <option value="272">黄村火车站</option>
+        <option value="273">义和庄</option>
+        <option value="274">生物医药基地</option>
+        <option value="275">天宫院</option>
+        <option value="276">大葆台</option>
+        <option value="277">稻田</option>
+        <option value="278">长阳</option>
+        <option value="279">篱笆房</option>
+        <option value="280">广阳城</option>
+        <option value="281">良乡大学城北</option>
+        <option value="282">良乡大学城</option>
+        <option value="283">良乡大学城西</option>
+        <option value="284">良乡南关</option>
+        <option value="285">苏庄</option>
+        <option value="286">T3航站楼</option>
+        <option value="287">T2航站楼</option>
+      </select>
+      <div class="ui sub header">to</div>
+      <select name="From" class="ui fluid search dropdown" id="to">
+        <option value="0">苹果园</option>
+        <option value="1">古城</option>
+        <option value="2">八角游乐园</option>
+        <option value="3">八宝山</option>
+        <option value="4">玉泉路</option>
+        <option value="5">五棵松</option>
+        <option value="6">万寿路</option>
+        <option value="7">公主坟</option>
+        <option value="8">军事博物馆</option>
+        <option value="9">木樨地</option>
+        <option value="10">南礼士路</option>
+        <option value="11">复兴门</option>
+        <option value="12">西单</option>
+        <option value="13">天安门西</option>
+        <option value="14">天安门东</option>
+        <option value="15">王府井</option>
+        <option value="16">东单</option>
+        <option value="17">建国门</option>
+        <option value="18">永安里</option>
+        <option value="19">国贸</option>
+        <option value="20">大望路</option>
+        <option value="21">四惠</option>
+        <option value="22">四惠东</option>
+        <option value="23">西直门</option>
+        <option value="24">车公庄</option>
+        <option value="25">阜成门</option>
+        <option value="26">长椿街</option>
+        <option value="27">宣武门</option>
+        <option value="28">和平门</option>
+        <option value="29">前门</option>
+        <option value="30">崇文门</option>
+        <option value="31">北京站</option>
+        <option value="32">朝阳门</option>
+        <option value="33">东四十条</option>
+        <option value="34">东直门</option>
+        <option value="35">雍和宫</option>
+        <option value="36">安定门</option>
+        <option value="37">鼓楼大街</option>
+        <option value="38">积水潭</option>
+        <option value="39">安河桥北</option>
+        <option value="40">北宫门</option>
+        <option value="41">西苑</option>
+        <option value="42">圆明园</option>
+        <option value="43">北京大学东门</option>
+        <option value="44">中关村</option>
+        <option value="45">海淀黄庄</option>
+        <option value="46">人民大学</option>
+        <option value="47">魏公村</option>
+        <option value="48">国家图书馆</option>
+        <option value="49">动物园</option>
+        <option value="50">新街口</option>
+        <option value="51">平安里</option>
+        <option value="52">西四</option>
+        <option value="53">灵境胡同</option>
+        <option value="54">菜市口</option>
+        <option value="55">陶然亭</option>
+        <option value="56">北京南站</option>
+        <option value="57">马家堡</option>
+        <option value="58">角门西</option>
+        <option value="59">公益西桥</option>
+        <option value="60">天通苑北</option>
+        <option value="61">天通苑</option>
+        <option value="62">天通苑南</option>
+        <option value="63">立水桥</option>
+        <option value="64">立水桥南</option>
+        <option value="65">北苑路北</option>
+        <option value="66">大屯路东</option>
+        <option value="67">惠新西街北口</option>
+        <option value="68">惠新西街南口</option>
+        <option value="69">和平西桥</option>
+        <option value="70">和平里北街</option>
+        <option value="71">北新桥</option>
+        <option value="72">张自忠路</option>
+        <option value="73">东四</option>
+        <option value="74">灯市口</option>
+        <option value="75">磁器口</option>
+        <option value="76">天坛东门</option>
+        <option value="77">蒲黄榆</option>
+        <option value="78">刘家窑</option>
+        <option value="79">宋家庄</option>
+        <option value="80">海淀五路居</option>
+        <option value="81">慈寿寺</option>
+        <option value="82">花园桥</option>
+        <option value="83">白石桥南</option>
+        <option value="84">车公庄西</option>
+        <option value="85">北海北</option>
+        <option value="86">南锣鼓巷</option>
+        <option value="87">东大桥</option>
+        <option value="88">呼家楼</option>
+        <option value="89">金台路</option>
+        <option value="90">十里堡</option>
+        <option value="91">青年路</option>
+        <option value="92">褡裢坡</option>
+        <option value="93">黄渠</option>
+        <option value="94">常营</option>
+        <option value="95">草房</option>
+        <option value="96">物资学院路</option>
+        <option value="97">通州北关</option>
+        <option value="98">通运门</option>
+        <option value="99">北运河西</option>
+        <option value="100">北运河东</option>
+        <option value="101">郝家府</option>
+        <option value="102">东夏园</option>
+        <option value="103">潞城</option>
+        <option value="104">北京西站</option>
+        <option value="105">湾子</option>
+        <option value="106">达官营</option>
+        <option value="107">广安门内</option>
+        <option value="108">虎坊桥</option>
+        <option value="109">珠市口</option>
+        <option value="110">桥湾</option>
+        <option value="111">广渠门内</option>
+        <option value="112">广渠门外</option>
+        <option value="113">双井</option>
+        <option value="114">九龙山</option>
+        <option value="115">大郊亭</option>
+        <option value="116">百子湾</option>
+        <option value="117">化工</option>
+        <option value="118">南楼梓庄</option>
+        <option value="119">欢乐谷景区</option>
+        <option value="120">垡头</option>
+        <option value="121">双合</option>
+        <option value="122">焦化厂</option>
+        <option value="123">朱辛庄</option>
+        <option value="124">育知路</option>
+        <option value="125">平西府</option>
+        <option value="126">回龙观东大街</option>
+        <option value="127">霍营</option>
+        <option value="128">育新</option>
+        <option value="129">西小口</option>
+        <option value="130">永泰庄</option>
+        <option value="131">林萃桥</option>
+        <option value="132">森林公园南门</option>
+        <option value="133">奥林匹克公园</option>
+        <option value="134">奥体中心</option>
+        <option value="135">北土城</option>
+        <option value="136">安华桥</option>
+        <option value="137">安德里北街</option>
+        <option value="138">什刹海</option>
+        <option value="139">白堆子</option>
+        <option value="140">六里桥东</option>
+        <option value="141">六里桥</option>
+        <option value="142">七里庄</option>
+        <option value="143">丰台东大街</option>
+        <option value="144">丰台南路</option>
+        <option value="145">科怡路</option>
+        <option value="146">丰台科技园</option>
+        <option value="147">郭公庄</option>
+        <option value="148">巴沟</option>
+        <option value="149">苏州街</option>
+        <option value="150">知春里</option>
+        <option value="151">知春路</option>
+        <option value="152">西土城</option>
+        <option value="153">牡丹园</option>
+        <option value="154">健德门</option>
+        <option value="155">安贞门</option>
+        <option value="156">芍药居</option>
+        <option value="157">太阳宫</option>
+        <option value="158">三元桥</option>
+        <option value="159">亮马桥</option>
+        <option value="160">农业展览馆</option>
+        <option value="161">团结湖</option>
+        <option value="162">金台夕照</option>
+        <option value="163">劲松</option>
+        <option value="164">潘家园</option>
+        <option value="165">十里河</option>
+        <option value="166">分钟寺</option>
+        <option value="167">成寿寺</option>
+        <option value="168">石榴庄</option>
+        <option value="169">大红门</option>
+        <option value="170">角门东</option>
+        <option value="171">草桥</option>
+        <option value="172">纪家庙</option>
+        <option value="173">首经贸</option>
+        <option value="174">丰台站</option>
+        <option value="175">泥洼</option>
+        <option value="176">西局</option>
+        <option value="177">莲花桥</option>
+        <option value="178">西钓鱼台</option>
+        <option value="179">车道沟</option>
+        <option value="180">长春桥</option>
+        <option value="181">火器营</option>
+        <option value="182">大钟寺</option>
+        <option value="183">五道口</option>
+        <option value="184">上地</option>
+        <option value="185">西二旗</option>
+        <option value="186">龙泽</option>
+        <option value="187">回龙观</option>
+        <option value="188">北苑</option>
+        <option value="189">望京西</option>
+        <option value="190">光熙门</option>
+        <option value="191">柳芳</option>
+        <option value="192">张郭庄</option>
+        <option value="193">园博园</option>
+        <option value="194">大瓦窑</option>
+        <option value="195">郭庄子</option>
+        <option value="196">大井</option>
+        <option value="197">陶然桥</option>
+        <option value="198">永定门外</option>
+        <option value="199">景泰</option>
+        <option value="200">方庄</option>
+        <option value="201">南八里庄</option>
+        <option value="202">北工大西门</option>
+        <option value="203">平乐园</option>
+        <option value="204">红庙</option>
+        <option value="205">朝阳公园</option>
+        <option value="206">枣营</option>
+        <option value="207">东风北桥</option>
+        <option value="208">将台</option>
+        <option value="209">高家园</option>
+        <option value="210">望京南</option>
+        <option value="211">阜通</option>
+        <option value="212">望京</option>
+        <option value="213">东湖渠</option>
+        <option value="214">来广营</option>
+        <option value="215">善各庄</option>
+        <option value="216">清华东路西口</option>
+        <option value="217">六道口</option>
+        <option value="218">北沙滩</option>
+        <option value="219">安立路</option>
+        <option value="220">关庄</option>
+        <option value="221">望京东</option>
+        <option value="222">崔各庄</option>
+        <option value="223">马泉营</option>
+        <option value="224">孙河</option>
+        <option value="225">国展</option>
+        <option value="226">花梨坎</option>
+        <option value="227">后沙峪</option>
+        <option value="228">南法信</option>
+        <option value="229">石门</option>
+        <option value="230">顺义</option>
+        <option value="231">俸伯</option>
+        <option value="232">高碑店</option>
+        <option value="233">传媒大学</option>
+        <option value="234">双桥</option>
+        <option value="235">管庄</option>
+        <option value="236">八里桥</option>
+        <option value="237">通州北苑</option>
+        <option value="238">果园</option>
+        <option value="239">九棵树</option>
+        <option value="240">梨园</option>
+        <option value="241">临河里</option>
+        <option value="242">土桥</option>
+        <option value="243">昌平西山口</option>
+        <option value="244">十三陵景区</option>
+        <option value="245">昌平</option>
+        <option value="246">昌平东关</option>
+        <option value="247">北邵洼</option>
+        <option value="248">南邵</option>
+        <option value="249">沙河高教园</option>
+        <option value="250">沙河</option>
+        <option value="251">巩华城</option>
+        <option value="252">生命科学园</option>
+        <option value="253">肖村</option>
+        <option value="254">小红门</option>
+        <option value="255">旧宫</option>
+        <option value="256">亦庄桥</option>
+        <option value="257">亦庄文化园</option>
+        <option value="258">万源街</option>
+        <option value="259">荣京东街</option>
+        <option value="260">荣昌东街</option>
+        <option value="261">同济南路</option>
+        <option value="262">经海路</option>
+        <option value="263">次渠南</option>
+        <option value="264">次渠</option>
+        <option value="265">新宫</option>
+        <option value="266">西红门</option>
+        <option value="267">高米店北</option>
+        <option value="268">高米店南</option>
+        <option value="269">枣园</option>
+        <option value="270">清源路</option>
+        <option value="271">黄村西大街</option>
+        <option value="272">黄村火车站</option>
+        <option value="273">义和庄</option>
+        <option value="274">生物医药基地</option>
+        <option value="275">天宫院</option>
+        <option value="276">大葆台</option>
+        <option value="277">稻田</option>
+        <option value="278">长阳</option>
+        <option value="279">篱笆房</option>
+        <option value="280">广阳城</option>
+        <option value="281">良乡大学城北</option>
+        <option value="282">良乡大学城</option>
+        <option value="283">良乡大学城西</option>
+        <option value="284">良乡南关</option>
+        <option value="285">苏庄</option>
+        <option value="286">T3航站楼</option>
+        <option value="287">T2航站楼</option>
+      </select>
+      <div style="display: flex; justify-content: flex-end; margin-top: 2em;">
+        <div class="ui button" style="margin: 0" id="query">查询</div>
+      </div>
+      <div class="ui divider" id="divider" style="display: none;"></div>
+      <div id="route-container" v-if="reachable === true">
+        <div style="display: flex; align-item: flex-begin;">
+          <div class="ui horizontal statistic" style="margin-right: 2em; align-items: flex-start;">
+            <div class="value">
+              {{ minDistance }}
+            </div>
+            <div class="label">
+              米
+            </div>
+          </div>
+          <div style="display: flex; flex-wrap: wrap;">
+            <div v-for="(v, i) in route" style="margin-right: 1em; margin-bottom: 1em; display: flex; align-items: center;">
+              <div style="display: flex; flex-direction: column; margin-right: 1em;">
+                <div class="ui label" style="margin: 0;" v-bind:class="{ blue: v[2] }">{{ v[1] }}<br><br>{{ v[0] }} <i class="ui refresh icon" v-if="v[2]"></i></div>
+              </div>
+              <i v-if="i !== route.length - 1" style="margin: 0;" class="ui right arrow icon"></i>
+            </div>
+          </div>
+        </div>
+        <div v-if="reachable === false">
+        <div class="ui horizontal statistic" style="margin-right: 2em; align-items: flex-start;">
+          <div class="value">
+            不可到达...
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="/jquery-3.3.1.js"></script>
+  <script src="/semantic.min.js"></script>
+  <script src="/vue.js"></script>
+  <script>
+    function intersection(thisSet, otherSet) {  
+      //初始化一个新集合，用于表示交集。  
+      var interSectionSet = new Set();  
+      //将当前集合转换为数组  
+      var values = Array.from(thisSet);  
+      //遍历数组，如果另外一个集合也有该元素，则interSectionSet加入该元素。  
+      for (var i = 0; i < values.length; i++) {  
+        
+        if (otherSet.has(values[i])) {  
+        interSectionSet.add(values[i])  
+        }  
+      }  
+      return interSectionSet;  
+    }
+    const fromEl = $('#from')
+      .dropdown({
+        allowAdditions: true
+      })
+    const toEl = $('#to')
+      .dropdown({
+        allowAdditions: true
+      })
+    let routeInfo = {
+      reachable: null,
+      minDistance: null,
+      route: []
+    }
+    $('#query').on('click', function () {
+      const from = fromEl.dropdown('get value')
+      const to   = toEl.dropdown('get value')
+      $
+        .get(`/query?from=${from}&to=${to}`)
+        .then(res => {
+          if (typeof res === 'string') res = JSON.parse(res)
+          routeInfo.reachable = res.reachable
+          routeInfo.minDistance = res.minDistance
+          for (let [index, value] of res.route.entries()) {
+            if (index === 0) {
+
+            } else if (index === res.route.length - 1) {
+
+            } else {
+              const prevStop = new Set(res.route[index - 1][1].split('，'))
+              const thisStop = new Set(value[1].split('，'))
+              const nextStop = new Set(res.route[index + 1][1].split('，'))
+              const t1 = intersection(prevStop, thisStop)
+              const t2 = intersection(thisStop, nextStop)
+              const t3 = intersection(t1, t2)
+              console.log(t3)
+              if (t3.size === 0) {
+                value[2] = true
+              }
+              // console.log(prevStop, thisStop, nextStop)
+            }
+          }
+          console.log(res.route)
+          routeInfo.route = res.route
+          $('#divider').css('display', 'block')
+        })
+    })
+    const vm = new Vue({
+      el: '#route-container',
+      data: routeInfo
+    })
+  </script>
+</body>
+</html>
