@@ -6,11 +6,17 @@ const sequelize = new Sequelize('db', 'username', 'password', {
   storage: path.resolve(__dirname, 'metro.sqlite')
 })
 
+/*
+ * 站点 Model
+ */
 const Stop = sequelize.define('stop', {
   name: Sequelize.STRING,
   line: Sequelize.STRING
 })
 
+/*
+ * 距离 Model
+ */
 const Distance = sequelize.define('distance', {
   from: Sequelize.INTEGER,
   to: Sequelize.INTEGER,

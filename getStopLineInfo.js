@@ -4,6 +4,9 @@ const fs = require('fs')
 const path = require('path')
 require('superagent-charset')(request)
 
+/*
+ * 获取路线信息
+ */
 function getDistanceInfo () {
   return request
     .get('https://www.bjsubway.com/station/zjgls')
@@ -23,6 +26,9 @@ function getDistanceInfo () {
     })
 }
 
+/*
+ * 获得线路站点信息
+ */
 getDistanceInfo()
   .then(diss => {
     diss = diss.map(v => v.trim())

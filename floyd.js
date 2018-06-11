@@ -5,9 +5,15 @@ module.exports = async function () {
   try {
     const { Stop, Distance } = models
 
+    /*
+     * 从数据库获得距离和站的信息
+     */
     let distanceModels = await Distance.findAll()
     let StopModels = await Stop.findAll()
 
+    /*
+     * 接下来构建距离矩阵
+     */
     // const distanceInfo = readDistanceInfo()
     const disMatrix = []
     // const id2placeArray = distanceInfo.id2placeArray
@@ -55,6 +61,9 @@ module.exports = async function () {
 
     const routeMatrix = getEmptyRouteMatrix(id2place.size, disMatrix)
 
+    /*
+     * floyd 算法主体
+     */
     function floyd() {
       for (let k = 0; k < id2place.size; ++k) {
         for (let i = 0; i < id2place.size; ++i) {
@@ -70,6 +79,10 @@ module.exports = async function () {
     }
 
     floyd()
+
+    /*
+     * 返回一个运行了之后根据起点终点 id 能获得最短距离、可达信息、具体路径的函数
+     */
     return function getRoute (fromId, toId) {
       const minDistance = disMatrix[fromId][toId]
       const reachable = minDistance < 100000007 ? true : false

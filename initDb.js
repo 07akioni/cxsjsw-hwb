@@ -25,6 +25,9 @@ const distanceInfo = readDistanceInfo()
 const disMatrix = distanceInfo.disMatrix
 const id2placeArray = distanceInfo.id2placeArray
 
+/*
+ * 把下载的信息全都写入数据库，毕竟作业要求了
+ */
 async function insertData () {
   await syncDb()
 

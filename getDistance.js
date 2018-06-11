@@ -4,6 +4,9 @@ const fs = require('fs')
 const path = require('path')
 require('superagent-charset')(request)
 
+/*
+ * 存到 distanceInfo.json 中
+ */
 function saveDistanceInfo () {
   return buildDistanceInfo()
     .then(o => {
@@ -11,6 +14,9 @@ function saveDistanceInfo () {
     })
 }
 
+/*
+ * 构建距离信息
+ */
 function buildDistanceInfo () {
   return formatDistanceInfo()
     .then(o => {
@@ -57,6 +63,9 @@ function buildDistanceInfo () {
     })
 }
 
+/*
+ * 整理距离数据格式
+ */
 function formatDistanceInfo () {
   return getDistanceInfo()
     .then(diss => {
@@ -85,6 +94,9 @@ function formatDistanceInfo () {
     })
 }
 
+/*
+ * 从网上下载距离信息
+ */
 function getDistanceInfo () {
   return request
     .get('https://www.bjsubway.com/station/zjgls')

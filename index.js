@@ -11,6 +11,9 @@ const app = express()
 app.use(morgan())
 app.use(express.static('./public'))
 
+/*
+ * 开一个查询接口
+ */
 app.get('/query', function (req, res) {
   const from = Number(req.query.from)
   const to = Number(req.query.to)
